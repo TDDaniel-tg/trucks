@@ -1,0 +1,359 @@
+/* ========================================
+   АДАПТИВНЫЕ СТИЛИ
+   ======================================== */
+
+/* Планшеты (768px - 1199px) */
+@media (max-width: 1199px) {
+    :root {
+        --h1-size: 40px;
+        --h2-size: 32px;
+        --h3-size: 20px;
+        --section-padding: 80px 0;
+    }
+
+    .container {
+        max-width: 960px;
+    }
+
+    /* Навигация */
+    .nav-menu {
+        gap: 30px;
+    }
+    
+    /* Улучшения для планшетов */
+    .hero-title {
+        font-size: clamp(36px, 6vw, 48px);
+    }
+    
+    .contact-form {
+        padding: 40px 30px;
+    }
+    
+    .advantage-number {
+        font-size: 46px;
+    }
+    
+    .service-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 36px;
+    }
+
+    /* Услуги */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Преимущества */
+    .advantages-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Отзывы */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* Контакты */
+    .contacts-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+/* Мобильные устройства (320px - 767px) */
+@media (max-width: 767px) {
+    :root {
+        --h1-size: 32px;
+        --h2-size: 28px;
+        --h3-size: 18px;
+        --body-size: 14px;
+        --section-padding: 40px 0;
+    }
+
+    /* Шапка */
+    .header {
+        padding: 10px 0;
+    }
+
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .logo a {
+        font-size: 20px;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        gap: 15px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .header-contacts {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Hero Section */
+    .hero {
+        margin-top: 60px;
+        height: 80vh;
+        min-height: 500px;
+    }
+
+    .hero-title {
+        font-size: clamp(24px, 6vw, 32px);
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+    /* Услуги */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 30px 20px;
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+
+    /* Преимущества */
+    .advantages-list {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .advantage-number {
+        font-size: 36px;
+    }
+
+    /* Галерея */
+    .gallery-item img {
+        height: 300px;
+    }
+
+    .gallery-prev,
+    .gallery-next {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .gallery-prev {
+        left: 10px;
+    }
+
+    .gallery-next {
+        right: 10px;
+    }
+
+    /* Отзывы */
+    .testimonials-grid {
+        gap: 20px;
+    }
+
+    .testimonial-card {
+        padding: 20px;
+    }
+
+    /* Партнеры */
+    .partner-item {
+        min-width: 150px;
+        padding: 0 15px;
+    }
+
+    /* Контакты */
+    .contact-form {
+        padding: 30px 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .yandex-map {
+        height: 300px;
+    }
+
+    /* Подвал */
+    .footer {
+        padding: 30px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Модальные окна */
+    .modal-close {
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+    }
+
+    .text-modal .modal-dialog {
+        margin: 20px;
+    }
+
+    .text-modal .modal-header {
+        padding: 15px 20px;
+    }
+
+    .text-modal .modal-body {
+        padding: 20px;
+    }
+
+    /* Кнопка "Наверх" */
+    .scroll-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+/* Маленькие мобильные устройства */
+@media (max-width: 480px) {
+    :root {
+        --h1-size: 28px;
+        --h2-size: 24px;
+        --h3-size: 16px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    /* Hero */
+    .hero-title {
+        margin-bottom: 15px;
+    }
+
+    .hero-subtitle {
+        margin-bottom: 20px;
+    }
+
+    /* Услуги */
+    .service-card h3 {
+        font-size: 18px;
+    }
+
+    /* Контакты */
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .contact-item i {
+        margin-top: 0;
+    }
+}
+
+/* Альбомная ориентация на мобильных */
+@media (max-width: 767px) and (orientation: landscape) {
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+}
+
+/* Поддержка высокой плотности пикселей */
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+    /* Оптимизация для retina дисплеев */
+    .service-icon,
+    .testimonial-avatar,
+    .social-link {
+        border: 1px solid transparent;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+}
+
+/* Hover эффекты только для устройств с мышью */
+@media (hover: hover) {
+    /* Все hover эффекты остаются активными */
+}
+
+@media (hover: none) {
+    /* Отключаем hover эффекты для тач-устройств */
+    .service-card:hover {
+        transform: none;
+    }
+
+    .nav-link:hover::after {
+        width: 0;
+    }
+
+    .btn-primary:hover {
+        transform: none;
+    }
+
+    .social-icons a:hover,
+    .social-link:hover,
+    .footer-socials a:hover {
+        transform: none;
+    }
+} 
